@@ -421,6 +421,7 @@ address {
   border-radius: 4px;
   background-color: var(--background-hero);
   color: var(--white);
+  padding: 15px 16px;
 }
 .mailing_button {
   width: 200px;
