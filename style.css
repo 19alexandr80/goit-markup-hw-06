@@ -596,15 +596,41 @@ address {
   display: flex;
   align-items: center;
 }
-.check-svg{
+
+
+.consent {
+  position: relative;
+  padding-left: 20px;
+}
+.check-svg {
+  display: none;
+}
+.consent_check:checked + .check-svg {
+  display: block;
   position: absolute;
-  top: 3px;
+  top: 2px;
+  left: 0px;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+}
+.consent_check:checked {
+  appearance: none;
+}
+.consent_check {
+  width: 16px;
+  height: 14px;
+  position: absolute;
+  top: 4px;
   left: 0px;
 }
-.consent input {
-  margin-right: 10px;
-  outline: none;
+.consent_check:hover {
+  border-color: var(--accent-color);
 }
+
+
+
+
 .consent a {
   color: var(--accent-color);
 }
