@@ -618,6 +618,7 @@ address {
 }
 .consent_check:checked {
   appearance: none;
+  position: absolute;
 }
 .consent_check {
   width: 16px;
@@ -625,9 +626,6 @@ address {
   position: absolute;
   top: 4px;
   left: 0px;
-}
-.consent_check:hover {
-  border-color: var(--accent-color);
 }
 
 
