@@ -448,39 +448,39 @@
         </div>
         <form class="form">
           <p class="form_text">Залиште свої дані, ми вам передзвонимо</p>
-          <ul class="form_ul off-style">
-            <li class="form_li">
-              <label for="neme_client">Ім'я</label>
-              <input type="text" name="name" id="neme_client" autofocus />
+          <div class="form_ul">
+            <label class="form_li">
+              <span>Ім'я</span>
+              <input type="text" name="name"  />
               <div class="form-svg">
                 <svg width="18px" height="18px">
                   <use href="./symbol-defs.svg#person"></use>
                 </svg>
               </div>
-            </li>
-            <li class="form_li">
-              <label for="tel_client">Телефон</label>
-              <input type="tel" name="tel" id="tel_client" />
+            </label>
+            <label class="form_li">
+              <span>Телефон</span>
+              <input type="tel" name="tel" autofocus />
               <div class="form-svg">
                 <svg width="18px" height="18px">
                   <use href="./symbol-defs.svg#phone"></use>
                 </svg>
               </div>
-            </li>
-            <li class="form_li">
-              <label for="meil_client">Пошта</label>
-              <input type="email" name="meil" id="meil_client" />
+            </label>
+            <label class="form_li">
+              <span>Пошта</span>
+              <input type="email" name="meil" />
               <div class="form-svg">
                 <svg width="18px" height="18px">
                   <use href="./symbol-defs.svg#email"></use>
                 </svg>
               </div>
-            </li>
-            <li class="form_li">
-              <label for="comment">Коментар</label>
-              <textarea name="comment" id="comment" rows="8" class="commet_textarea" placeholder="Введіть текст"></textarea>
-            </li>
-          </ul>
+            </label>
+            <label class="form_li">
+              <span>Коментар</span>
+              <textarea name="comment" class="commet_textarea" placeholder="Введіть текст"></textarea>
+            </label>
+          </div>
           <div class="consent">
             <label class="consent_lab">
               <input type="checkbox" class="consent_check" name="consent" value="consent"  />

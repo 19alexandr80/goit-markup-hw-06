@@ -405,7 +405,7 @@ address {
   background-color: var(--accent-color);
 }
 .mailing {
-  margin-left: 93px;
+  margin-left: auto;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -462,11 +462,6 @@ address {
 
 .modal {
   position: fixed;
-  /*top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--modal-back);*/
   visibility: hidden;
   opacity: 0;
 }
@@ -576,7 +571,7 @@ address {
 .form_li input:focus {
   border: 1px solid var(--accent-color);
 }
-.form_li label {
+.form_li span {
   margin-bottom: 4px;
 }
 .form-svg {
