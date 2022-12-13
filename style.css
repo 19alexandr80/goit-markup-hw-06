@@ -447,6 +447,7 @@ address {
 .mailing_button:hover,
 .mailing_button:focus {
   background-color: var(--button-hover);
+  cursor: pointer;
 }
 .mailing_button_group {
   position: relative;
@@ -596,6 +597,9 @@ address {
   display: flex;
   align-items: center;
 }
+.consent_lab:hover {
+  cursor: pointer;
+}
 
 /*checkbox*/
 
@@ -658,6 +662,7 @@ address {
 .submit_button:focus,
 .submit_button:hover {
   background-color: var(--button-hover);
+  cursor: pointer;
 }
 
 /*Портфолио*/
