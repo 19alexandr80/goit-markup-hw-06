@@ -441,7 +441,11 @@
     </footer>
     <div class="modal">
       <div class="modal-window-content">
-        <div class="close-modal">&#10006;</div>
+        <div class="close-modal">
+          <svg width="18px" height="18px" class="svg">
+            <use href="./symbol-defs.svg#close"></use>
+          </svg>
+        </div>
         <form class="form">
           <p class="form_text">Залиште свої дані, ми вам передзвонимо</p>
           <ul class="form_ul off-style">
@@ -480,11 +484,12 @@
           <div class="consent">
             <label class="consent_lab">
               <input type="checkbox" class="consent_check" name="consent" value="consent"  />
-              <span class="check-svg">
-                <svg width="16px" height="15px" class="svg">
+                <svg width="16px" height="15px" class="check_off">
+                  <use href="./symbol-defs.svg#check_off"></use>
+                </svg>
+                <svg width="16px" height="15px" class="check-svg">
                   <use href="./symbol-defs.svg#check"></use>
                 </svg>
-              </span>
               Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
           </div>
           <button type="submit" class="submit_button">Відправити</button>
