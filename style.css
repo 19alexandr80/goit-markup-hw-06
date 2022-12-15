@@ -26,28 +26,8 @@ body {
 img {
   display: block;
 }
-.topline {
-  border-bottom: 1px solid var(--border-color);
-}
-.topline-content {
-  display: flex;
-  align-items: center;
-}
-.topline-nav {
-  display: flex;
-  align-items: center;
-}
-.logo span {
-  color: var(--accent-color);
-}
-.logo {
-  color: var(--black);
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+.off-style {
+  list-style: none;
 }
 .section {
   padding-top: 94px;
@@ -60,13 +40,48 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.off-style {
-  list-style: none;
+
+/*logotip*/
+
+.logo span {
+  color: var(--accent-color);
+}
+.logo {
+  color: var(--black);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+/*top-line*/
+
+.this::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  transform: translateY(32px);
+}
+.topline-content {
+  display: flex;
+  align-items: center;
+}
+.topline-nav {
+  display: flex;
+  align-items: center;
 }
 .topline {
   background-color: var(--white);
   padding-top: 25px;
   padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
 }
 .topline-nav .logo {
   margin-right: 95px;
@@ -93,6 +108,9 @@ img {
 .topline-nav-ul .nv-l + .nv-l {
   margin-left: 50px;
 }
+.nv-l {
+  position: relative;
+}
 .contakt-lnk {
   color: var(--text-color);
   fill: currentColor;
@@ -109,31 +127,22 @@ img {
   display: inline-block;
   margin-right: 10px;
 }
-.topline-contakts .cntkts-l:not(:last-child) {
-  margin-right: 40px;
-}
 .nav-lnk:hover,
 .nav-lnk:focus,
 .contakt-lnk:hover,
-.contakt-lnk:focus,
-.basement-link:hover,
-.basement-link:focus {
+.contakt-lnk:focus {
   color: var(--accent-color);
 }
-.nv-l {
-  position: relative;
+.cntkts-l:not(:last-child) {
+  margin-right: 40px;
 }
-.this::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  background: var(--accent-color);
-  border-radius: 2px;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  transform: translateY(32px);
-}
+
+
+
+
+
+
+
 .hero {
   color: var(--white);
   background-image: linear-gradient(
@@ -356,6 +365,10 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.basement-link:hover,
+.basement-link:focus {
+  color: var(--accent-color);
 }
 .adres-ul {
   margin-bottom: 0px;
