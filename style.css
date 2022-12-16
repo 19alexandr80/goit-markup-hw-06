@@ -40,6 +40,24 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.contents-ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 /*logotip*/
 
@@ -137,11 +155,7 @@ img {
   margin-right: 40px;
 }
 
-
-
-
-
-
+/*Hero*/
 
 .hero {
   color: var(--white);
@@ -186,28 +200,33 @@ img {
   margin-bottom: 30px;
   margin-top: 0px;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.contents-ul {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0px;
-}
-.peculiarities p,
-.team p {
+
+
+
+/*Особливості*/
+
+
+
+.peculiarities p {
   color: var(--text-color);
   letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
+.peculiarities h3 {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+
+
+
 .peculiarities-ulist {
   display: flex;
 }
@@ -226,25 +245,17 @@ img {
   margin-bottom: 30px;
   border-radius: 4px;
 }
-.peculiarities h3 {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.peculiarities p {
-  font-size: 14px;
-  line-height: 1.71;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+
+
+
+
+/*Наша робота*/
+
+
 .our_work {
   padding-top: 0px;
 }
-.our_work h2,
-.team h2 {
+.our_work h2 {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -258,9 +269,26 @@ img {
 .work-ulist .works-list:not(:last-child) {
   margin-right: 30px;
 }
+
+
+
+/*Наша команда*/
+
 .team {
   background-color: var(--background-team);
   text-align: center;
+}
+.team h2 {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+.team p {
+  color: var(--text-color);
+  letter-spacing: 0.03em;
 }
 .team-ulist p {
   font-size: 16px;
@@ -276,6 +304,9 @@ img {
   margin-top: 0px;
   margin-bottom: 10px;
 }
+.team-ulist {
+  display: flex;
+}
 .team-cards {
   flex-basis: 270px;
   background-color: var(--white);
@@ -283,8 +314,12 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-ulist {
-  display: flex;
+.team-ulist .team-cards + .team-cards {
+  margin-left: 30px;
+}
+.team-cont {
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 .networks {
   display: inline-block;
@@ -298,24 +333,31 @@ img {
 .networks:hover,
 .networks:focus {
   background-color: var(--accent-color);
-  fill: var(--white)
+  fill: var(--white);
 }
 .social-networks {
   display: flex;
   padding-left: 32px;
 }
-.social-networks li + li,
-.social-networks-footer li+li {
+.social-networks li + li {
   margin-left: 10px;
 }
-.team-ulist .team-cards + .team-cards {
+
+
+
+/*Спожівачі*/
+
+
+
+
+.client {
+  display: flex;
+  padding-left: 0px;
+}
+.client li + li {
   margin-left: 30px;
 }
-.team-cont {
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-.compani h2 {
+.compani-h {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -323,10 +365,6 @@ img {
   letter-spacing: 0.03em;
   margin-top: 0px;
   margin-bottom: 50px;
-}
-.client {
-  display: flex;
-  padding-left: 0px;
 }
 .compani-link {
   color: var(--networks);
@@ -336,19 +374,20 @@ img {
   padding: 16px 32px;
   display: inline-block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .compani-link:hover,
 .compani-link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
-.client li + li {
-  margin-left: 30px;
-}
 .compani-svg {
   fill: currentColor;
 }
+
+/*Подвал*/
+
+
+
 .basement {
   background-color: var(--background-hero);
   padding-top: 60px;
@@ -366,14 +405,13 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.basement-link:hover,
-.basement-link:focus {
-  color: var(--accent-color);
-}
 .adres-ul {
   margin-bottom: 0px;
   margin-top: 0px;
   padding-left: 0px;
+}
+.adres-ul .adres-li + .adres-li {
+  margin-top: 12px;
 }
 .basement-link {
   color: var(--basement-link);
@@ -384,15 +422,16 @@ img {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.adres-ul .adres-li + .adres-li {
-  margin-top: 12px;
+.basement-link:hover,
+.basement-link:focus {
+  color: var(--accent-color);
 }
 .basement .logo {
   display: inline-block;
   color: var(--white);
   margin-bottom: 28px;
 }
-address {
+.address {
   font-style: normal;
 }
 .join {
@@ -408,6 +447,9 @@ address {
   display: flex;
   padding-left: 0px;
 }
+.social-networks-footer li+li {
+  margin-left: 10px;
+}
 .social-networks-footer .networks {
   fill: var(--white);
   background-color: var(--networks-back);
@@ -417,6 +459,10 @@ address {
 .social-networks-footer .networks:focus {
   background-color: var(--accent-color);
 }
+
+
+
+
 .mailing {
   margin-left: auto;
   font-weight: 700;
@@ -441,6 +487,9 @@ address {
 .mailing_input:focus {
   border: 1px solid var(--accent-color);
 }
+
+
+
 .mailing_button {
   width: 200px;
   height: 50px;
@@ -518,25 +567,6 @@ address {
   fill: var(--accent-color);
   cursor: pointer;
 }
-.commet_textarea {
-  height: 120px;
-  resize: none;
-  padding: 14px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.commet_textarea::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.commet_textarea:focus {
-  border: 1px solid var(--accent-color);
-}
 .form {
   padding-top: 40px;
   padding-left: 41px;
@@ -597,6 +627,33 @@ address {
   fill: currentColor;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.commet_textarea {
+  height: 120px;
+  resize: none;
+  padding: 14px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.commet_textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.commet_textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+
+
+
+
+
 .consent {
   position: relative;
   margin-top: 0px;
@@ -612,6 +669,9 @@ address {
 }
 .consent_lab:hover {
   cursor: pointer;
+}
+.consent a {
+  color: var(--accent-color);
 }
 
 /*checkbox*/
@@ -630,6 +690,11 @@ address {
   height: 15px;
   border-radius: 2px;
 }
+
+
+
+
+
 .consent_check:checked ~ .check-svg {
   opacity: 1;
 }
@@ -640,6 +705,9 @@ address {
   appearance: none;
   position: absolute;
 }
+
+
+
 .check_off {
   position: absolute;
   fill : var(--title-text-color);
@@ -652,9 +720,7 @@ address {
 
 
 
-.consent a {
-  color: var(--accent-color);
-}
+
 .submit_button {
   width: 200px;
   height: 50px;
